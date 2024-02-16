@@ -1,15 +1,16 @@
 {% include 'tv_shows/header.html'%}
   <h1>{{tvshow_id.title}}</h1>
   <img src={{tvshow_id.image}} alt="" width="480" height="300">
-  <p>Description:{{tvshow_id.description}}</p>
+<br><br>
+  <h6>Description:{{tvshow_id.description}}</h6>
   <hr>
-  <p>Genre: {{tvshow_id.genre}}</p>
+  <h6>Genre: {{tvshow_id.genre}}</h6>
 
   <ul>
+      <h3>Reviews</h3>
       {% for i in tvshow_id.tvshow_reviews.all %}
         <li>
             <hr>
-            <h3>Review</h3>
             <h4>{{i.text}}</h4>
             <h3>{{i.stars}}</h3>
 

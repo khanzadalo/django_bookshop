@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Are you sure?</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button type="submit">Yes</button>
+    <button><a href="/">No</a></button>
+</form>
+</body>
+</html>
