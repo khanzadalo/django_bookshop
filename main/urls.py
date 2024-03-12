@@ -9,6 +9,7 @@ urlpatterns = [
     path('', include('tv_show.urls')),
     path('', include('parser_app.urls')),
     path('', include('custom_users.urls')),
+    path('', include('product.urls'))
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
     + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
