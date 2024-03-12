@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users list</title>
+</head>
+<body>
+<h1>List of users</h1>
+<ol>
+    {% for i in user %}
+    <li>
+        <h3>Login: {{i.username}}</h3>
+        <p>Email: {{i.email}}</p>
+        <p>Phone number: {{i.phone_number}}</p>
+        <p>Date of birth: {{i.date_of_birth}}</p>
+
+    </li>
+    {% endfor %}
+</ol>
+<form action="{% url 'persons:logout'%}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+
+</form>
+</body>
+</html>

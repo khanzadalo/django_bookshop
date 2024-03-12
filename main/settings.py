@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'books',
     'tv_show',
     'parser_app',
+    'custom_users',
 
 ]
 
